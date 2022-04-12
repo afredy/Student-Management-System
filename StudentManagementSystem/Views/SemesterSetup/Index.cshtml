@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<fieldset>
+    <legend class=""></legend>
+    <div class="form-horizontal">
+        <div class="box-body col-md-offset-2">
+            <div class="form-group hidden">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="SemesterId" name="SemesterId" value="0">
+                </div>
+            </div>
+            
+            <div class="form-group ">
+                <label for="SemesterName" class="col-md-3 control-label required">Semester Name</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="SemesterName" name="SemesterName">
+                </div>
+            </div>
+
+
+            <div class="form-group ">
+                <div class="col-md-1 col-md-offset-3">
+                    <input type="button" class="form-control btn btn-success btn-block" id="btnSave" value="Save">
+                </div>
+                <div class="col-md-1">
+                    <input type="button" class="form-control btn btn-warning btn-block" id="btnClear" value="Clear">
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">Semester List</h3>
+                <span class="pull-right clickable"><i class="fa fa-angle-double-up"></i></span>
+            </div>
+            <div class="panel-body col-lg-pull-1">
+                <div id="div-list" class=" glyphicon-align-right">
+                    <table id="SemesterTable">
+                        <thead>
+                            <tr>
+                                <th>Semester ID</th>
+                                <th>Department Name</th>
+                                <th>Action</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script src="~/js/semester.js"></script>
+
+    <script type="text/javascript">
+    Semestersetup.init();
+    </script>
+}
+
+
+
+

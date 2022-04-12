@@ -1,0 +1,202 @@
+﻿
+.invoicePrint {
+    width: 100% !important;
+    padding: 5px !important;
+    font-family: Arial;
+}
+
+    .invoicePrint .p1 p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .invoicePrint .p2 p {
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    .invoicePrint .invBrand {
+        font-size: 20px; /*48px*/
+        font-weight: 600; /*800*/
+        line-height: 24px; /*line-height: 24px;*/
+    }
+    .invoicePrint .shopNameHeader {
+        font-size: 17px; /*48px*/
+        font-weight: 500; /*800*/
+        line-height: 24px; /*line-height: 24px;*/
+    }
+
+    .invoicePrint .invSlogan {
+        font-size: 12px /*26px*/;
+        font-weight: bold;
+        margin: 10px 0;
+        letter-spacing: 0.5px;
+    }
+
+    .invoicePrint .invAddress {
+        font-size: 9px/*28px*/;
+    }
+
+    .invoicePrint .invVatRegNo {
+        font-size: 13px/*28px*/;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .invoicePrint .invInvoiceNo {
+        font-size: 13px/*28px*/;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+        .invoicePrint .invInvoiceNo.left {
+            float: left;
+            width: 35%;
+            text-align: left !important;
+        }
+
+        .invoicePrint .invInvoiceNo.right {
+            float: right;
+            width: 65%;
+            text-align: right !important;
+        }
+
+    .invoicePrint .invSaleDate {
+        font-size: 10px/*26px*/;
+        margin: 10px 0;
+    }
+
+        .invoicePrint .invSaleDate.left {
+            float: left;
+            width: 65%;
+            text-align: left !important;
+        }
+
+        .invoicePrint .invSaleDate.right {
+            float: right;
+            width: 35%;
+            text-align: right !important;
+        }
+
+.itemDetails {
+    width: 100%;
+}
+
+.invoicePrint .itemDetails {
+    border-top: 1px solid black;
+}
+
+    .invoicePrint .itemDetails td, .invoicePrint .itemDetails th {
+        font-size: 10px/*24px*/;
+        text-align: right !important;
+    }
+
+    .invoicePrint .itemDetails tr {
+        border-bottom: 1px solid black;
+    }
+
+    .invoicePrint .itemDetails .item, .invoicePrint .itemDetails .itemH {
+        text-align: left !important;
+    }
+
+    .invoicePrint .itemDetails .qty, .invoicePrint .itemDetails .qtyH {
+        text-align: center !important;
+    }
+
+    .invoicePrint .itemDetails .cross {
+        text-align: right !important;
+    }
+
+.invoicePrint .invSummary {
+    width: 100%;
+    float: right;
+    font-size: 12px/*28px*/;
+    text-align: right !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+    .invoicePrint .invSummary .v {
+        width: 60px;
+    }
+
+.invoicePrint .sP {
+    font-size: 10px/*24px*/;
+}
+
+    .invoicePrint .sP .left {
+        float: left;
+        text-align: left;
+    }
+
+    .invoicePrint .sP .right {
+        float: right;
+        text-align: right;
+    }
+
+.invoicePrint .policy {
+    font-size: 10px/*24px*/;
+    font-weight: 500;
+    border-top: 1px solid black;
+    line-height: 24px;
+}
+
+.invoicePrint .dev {
+    font-size: 10px/*24px*/;
+    border-top: 1px solid black;
+}
+
+@media screen {
+    .no-view {
+        display: none !important;
+    }
+}
+
+@media print {
+    @page {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    div.content-wrapper {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    html, body {
+        height: auto !important;
+    }
+
+    #overlay {
+        display: none;
+    }
+
+    #return-to-top {
+        display: none !important;
+    }
+
+    .salePage {
+        display: none;
+    }
+
+    .main-footer {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0 !important;
+    }
+}
+
+table {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

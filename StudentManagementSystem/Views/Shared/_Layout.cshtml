@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="navbar navbar-inverse ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Student Management System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    @*<div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Department", "Index", "DepartmentSetup")</li>
+
+                            </ul>
+                            @Html.Partial("_LoginPartial")
+                        </div>*@
+
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="@Url.Action("Index", "Home")">
+                                    <span class="glyphicon glyphicon-home"></span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "SemesterSetup")">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    Semester
+                                </a>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-group-justified dropdown-toggle " data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                        <span class="bi bi-person-fill"></span>
+                                        Teacher
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a href="@Url.Action("Index", "TeacherSetup")">
+
+                                            Register Teacher
+                                        </a>
+                                        <br>
+                                        <a href="@Url.Action("Index", "AssignCourseSetup")">
+                                            Assign Course
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index1", "AssignCourseSetup")">
+                                            Assigned Courses List
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "UnassignCourseSetup")">
+                                            Unassigned Courses 
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><div style="color:transparent;">y</div></li>
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-group-justified dropdown-toggle " data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                        Department
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a href="@Url.Action("Index", "DepartmentSetup")">
+
+                                            Create Department
+                                        </a>
+                                        <a href="@Url.Action("Index", "DepartmentSetup")">
+                                            Departments
+                                        </a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><div style="color:transparent;">y</div></li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-group-justified dropdown-toggle " data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                        <span class="bi bi-mortarboard"></span>
+                                        Course
+                                    </button>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a href="@Url.Action("Index", "CourseSetup")">
+
+                                            Save Course
+                                        </a>
+                                        <br>
+                                        <a href="@Url.Action("Index", "CourseSetup")">
+                                            Course Statistics
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><div style="color:transparent;">y</div></li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-group-justified dropdown-toggle " data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                        <span class="bi bi-mortarboard"></span>
+                                        Student
+                                    </button>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a href="@Url.Action("Index", "RegisterStudent")">
+
+                                            Register Student
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "EnrollStudent")">
+                                            Enroll Student
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index1", "EnrollStudent")">
+                                            Enrolled Student List
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "StudentResult")">
+                                            Save Student Result
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "ResultSearch")">
+                                            Search Result
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><div style="color:transparent;">y</div></li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-group-justified dropdown-toggle " data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                        <span class="bi bi-mortarboard"></span>
+                                        Classroom
+                                    </button>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a href="@Url.Action("Index", "RoomSetup")">
+
+                                            Create Room
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "AllocateRoomSetup")">
+
+                                            Allocate Classroom
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index1", "AllocateRoomSetup")">
+
+                                            Allocated ClassroomList
+                                        </a>
+                                        <br />
+                                        <a href="@Url.Action("Index", "UnallocateClassroom")">
+                                            Unallocate Classroom
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="container body-content">
+                @RenderBody()
+                @RenderSection("scripts", required: false)
+            </div>
+        </div>
+        <div>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Coded By NHT Application</p>
+            </footer>
+        </div>
+
+    </div>
+
+  
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/js/helper/jquery.dataTables.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/js/helper/dataTables.bootstrap.js"></script>
+
+
+    
+    <script src="~/js/helper/MakePaginationWithDataTableWithoutButton.js"></script>
+    <script src="~/js/helper/ShowNotification.js"></script>
+  
+    <script src="~/Scripts/Plugins/bootbox.min.js"></script>
+    
+
+
+    <link href="~/Plugins/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Plugins/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <script src="~/Plugins/js/moment.min.js"></script>
+    <script src="~/Plugins/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+</html>

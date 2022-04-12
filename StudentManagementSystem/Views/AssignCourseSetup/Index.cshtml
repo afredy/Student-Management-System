@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<fieldset>
+    <legend class=" text-center ">Assign Course</legend>
+    <div class="form-horizontal">
+        <div class="box-body col-md-offset-2">
+            <div class="form-group hidden">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="Id" name="Id" value="0">
+                </div>
+            </div>
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <label for="DepartmentId" class="col-md-3 control-label required">Department :</label>
+                    <div class="col-md-3">
+                        <select class="form-control" id="DepartmentId" name="DepartmentId"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="TeacherId" class="col-md-3 control-label required">Teacher :</label>
+                <div class="col-md-3">
+                    <select class="form-control" id="TeacherId" name="TeacherId"></select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="TeacherCredit" class="col-md-3 control-label required">Total Credit</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="TeacherCredit" name="TeacherCredit" disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="CreditTaken" class="col-md-3 control-label required">Credit ToBe Taken</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="CreditTaken" name="CreditTaken" disabled="disabled"/>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="RemainingCredit" class="col-md-3 control-label required">Remaning Credit</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="RemainingCredit" name="RemainingCredit" disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="CourseId" class="col-md-3 control-label required">Course :</label>
+                <div class="col-md-3">
+                    <select class="form-control" id="CourseId" name="CourseId"></select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="CourseName" class="col-md-3 control-label required">Course Name</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="CourseName" name="CourseName" disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="CourseCredit" class="col-md-3 control-label required">Credit </label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="CourseCredit" name="Credit" disabled="disabled" />
+                </div>
+            </div>
+
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <div class="col-md-1 col-md-offset-3">
+                        <input type="button" class="form-control btn btn-primary btn-block" id="btnSave" value="Save">
+                    </div>
+                    <div class="col-md-1">
+                        <input type="button" class="form-control btn btn-warning btn-block" id="btnClear" value="Clear">
+                    </div>
+                </div>
+
+            </div>
+</fieldset>
+
+
+
+
+
+@section scripts {
+    <script src="~/js/assignCourse.js"></script>
+    <script type="text/javascript">
+        AssignCourseSetup.init();
+    </script>
+}
+
+
+
+

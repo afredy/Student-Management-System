@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+}
+
+
+<fieldset>
+    <legend class=" text-center ">Allocated Classroom List</legend>
+    <div class="form-horizontal">
+        <div class="box-body col-md-offset-2">
+            <div class="form-group hidden">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="Id" name="Id" value="0">
+                </div>
+            </div>
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <label for="DepartmentId" class="col-md-3 control-label required">Department :</label>
+                    <div class="col-md-3">
+                        <select class="form-control" id="DepartmentId" name="DepartmentId"></select>
+                    </div>
+                </div>
+            </div>
+
+</fieldset>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">AllocateClassroom List</h3>
+                <span class="pull-right clickable"><i class="fa fa-angle-double-up"></i></span>
+            </div>
+
+            <div class="panel-body">
+
+                <div id="div-list">
+                    <table id="AllocateClassroomTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Schedule Info</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts {
+    <script src="~/js/AllocateClassroom.js"></script>
+    <script type="text/javascript">
+        AllocateClassroomSetup.init();
+    </script>
+}
+

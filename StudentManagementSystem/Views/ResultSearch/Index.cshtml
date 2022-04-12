@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<fieldset>
+    <legend class=" text-center ">Search Result</legend>
+    <div class="form-horizontal">
+        <div class="box-body col-md-offset-2">
+            <div class="form-group hidden">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="Id" name="Id" value="0">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="RegId" class="col-md-3 control-label required">Student Reg No : </label>
+                <div class="col-md-3">
+                    <select type="text" class="form-control" id="RegId" name="RegId"></select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="StudentName" class="col-md-3 control-label required">Student Name :</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="StudentName" name="StudentName" disabled>
+
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="Email" class="col-md-3 control-label required">Student Email : </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="Email" name="Email" disabled>
+                </div>
+            </div>
+
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <label for="DepartmentId" class="col-md-3 control-label required">Department :</label>
+                    <div class="col-md-3">
+                        <input class="form-control" id="DepartmentId" name="DepartmentId" disabled />
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <div class="col-md-1 col-md-offset-3">
+                        <input type="button" class="form-control btn btn-primary btn-block" id="btnSave" value="Find">
+                    </div>
+                    <div class="col-md-1">
+                        <input type="button" class="form-control btn btn-warning btn-block" id="btnClear" value="Clear">
+                    </div>
+                </div>
+
+            </div>
+</fieldset>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Room List</h3>
+                <span class="pull-right clickable"><i class="fa fa-angle-double-up"></i></span>
+            </div>
+            <div class="panel-body">
+                <div id="div-list">
+                    <table id="SearchResultTable">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts {
+<script src="~/js/ResultSearch.js"></script>
+    <script type="text/javascript">
+       ResultSearch.init();
+    </script>
+}
+
+
+
+
+
+
+
+

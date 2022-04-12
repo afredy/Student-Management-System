@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<fieldset>
+    
+    <div class="form-horizontal">
+        <div class="box-body col-md-offset-2">
+       
+
+
+            <div class="form-group ">
+
+                <div class="form-group ">
+                    <div class="col-md-1 col-md-offset-3">
+                        <button type="button" class="btn btn-primary btn-lg" id="btnSave" >UNASSIGN ALL COURSE</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+</fieldset>
+
+@section scripts {
+<script src="~/js/UnassignAllCourse.js"></script>
+    <script type="text/javascript">
+        UnassignAllCourse.init();
+    </script>
+}
